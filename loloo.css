@@ -38,7 +38,7 @@ width: 20%;
 
   text-decoration: solid;
 }
-.container{
+.container2{
  margin: 1em; 
  display:flex;
 justify-content: space-around;
@@ -60,18 +60,19 @@ max-width: 350px;
   
  
 }
+
 .j22{
 
-  background-image: url("https://img.freepik.com/fotos-premium/fondo-pantalla-abstracto-lineas-liquidas-colores-vibrantes-fondo-abstracto-colorido-suave_692702-6779.jpg");
+  background-image: url("https://img.freepik.com/fotos-premium/fondo-pantalla-abstracto-lineas-liquidas-colores-vibrantes-fondo-abstracto-colorido-suave_692702-6779.jpg"); 
 }
 
-.container img{
+.container2 img{
   width: 100%;
   height: 55%;
   
 
 }
-.container h1{ 
+.container2 h1{ 
   font-size: x-large;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   text-align: center;
@@ -109,8 +110,11 @@ text-align: center;
 
 .col-md-6 .contenedor {
 
-  display: flex;
-  flex-wrap: wrap;
+   display: flex;
+  flex-direction: row;
+ flex-wrap: nowrap;
+ min-height: auto;
+  
  
  
 }
@@ -121,9 +125,15 @@ padding: 5%;
 }
 .col-md-6 .contenedor .caja img{
   width: 100%;
-  height: 80%;
+ height: 75%;
+  
  
  
+}
+.contenedor h4{
+  margin-bottom: 10em;
+
+  
 }
 .letras {
   font-style: italic;
