@@ -1,24 +1,23 @@
 
-.arriba{
+#topic{
  
 
   margin: 1em; 
   display:flex;
  justify-content: flex-start;
-
  flex-wrap: wrap;
- width: 100%;
+ width: 99%;
  height: 100px;
+ background-color: rgb(225,6,0);
+ border: 5px black solid;
  
-
- background-color: rgb(0, 0, 0);
  
 
   
 }
-.arriba img{
+#topic img{
 height: 100%;
-width: 20%;
+width: 15%;
 
 }
 .body{
@@ -27,16 +26,15 @@ width: 20%;
 }
 .clase{
   margin: auto;
- 
   font-family: 'Times New Roman', Times, serif;
   font-style: italic;
   color:rgb(255, 255, 255);
   text-align: center;
   font-weight: 100%;
-  font-size:xx-large;
+  font-size :2.2rem;
   font-stretch: ultra-expanded;
-
   text-decoration: solid;
+ 
 }
 .container2{
  margin: 1em; 
@@ -50,20 +48,28 @@ width: 100%;
 }
 .item{
  
-  margin: 8px 4px;
-
+box-shadow:8px 7px black ;
+margin: 8px 4px;
 background-color: rgb(255, 255, 255);
-
 min-width: 200px;
-max-width: 350px;
-
-  
- 
+max-width: 350px; 
+cursor: pointer;
+border: 4px grey solid;
+border-radius: 8px;
+transition: transform 0.5s ease;
+overflow: hidden;
 }
 
-.j22{
+.item:hover{
+transform: translateY(-10px);
 
-  background-image: url("https://img.freepik.com/fotos-premium/fondo-pantalla-abstracto-lineas-liquidas-colores-vibrantes-fondo-abstracto-colorido-suave_692702-6779.jpg"); 
+}
+
+.fondoprincipal{
+
+
+  background-image: url("https://img.freepik.com/fotos-premium/fondo-pantalla-abstracto-lineas-liquidas-colores-vibrantes-fondo-abstracto-colorido-suave_692702-6779.jpg");  */
+
 }
 
 .container2 img{
@@ -81,6 +87,12 @@ max-width: 350px;
 .pie{
 font-size: large;
 text-align: center;
+padding-bottom: 3%;
+}
+
+.noLink{
+  color: black;
+  text-decoration: none;
 }
 .col-md-6 .contenedor .caja{
    
@@ -90,7 +102,7 @@ text-align: center;
 }
 
 
-.fondo .container img{
+.fondodetalle .container img{
  width: 35%;
  
 
@@ -99,7 +111,7 @@ text-align: center;
 }
 
 
-.titulo-escuderia{
+#titulo-escuderia{
   text-align: center;
   background-color:rgb(213, 208, 208);
 }
@@ -141,13 +153,26 @@ padding: 5%;
  
  
 }
-.fondo .container{
+.fondodetalle .container{
   display: block;
   background-color: white;
  
 }
-.fondo{
+.fondodetalle{
   background-color: rgb(213, 208, 208);
 }
 
-
+footer{
+  background-color: rgb(20, 19, 19);
+  padding: 2.5rem;
+  color: white;
+  padding-bottom:5%;
+}
+.btn-primary{
+  float: right;
+  border: 4px blue solid;
+  border-radius: 10px;
+  gap:15px;
+  width: 125px;
+  height: 50px;
+}
