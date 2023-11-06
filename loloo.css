@@ -2,11 +2,11 @@
 #topic{
  
 
-  margin: 1em; 
+  margin-top:0%;
   display:flex;
  justify-content: flex-start;
  flex-wrap: wrap;
- width: 99%;
+ width: 100%;
  height: 100px;
  background-color: rgb(225,6,0);
  border: 5px black solid;
@@ -30,8 +30,8 @@ width: 15%;
   font-style: italic;
   color:rgb(255, 255, 255);
   text-align: center;
-  font-weight: 100%;
-  font-size :2.2rem;
+  font-weight: bold;
+  font-size :2.1rem;
   font-stretch: ultra-expanded;
   text-decoration: solid;
  
@@ -56,19 +56,20 @@ max-width: 350px;
 cursor: pointer;
 border: 4px grey solid;
 border-radius: 8px;
-transition: transform 0.5s ease;
+transition: all 0.5s ease;
 overflow: hidden;
 }
 
 .item:hover{
 transform: translateY(-10px);
 
+
 }
 
 .fondoprincipal{
 
 
-  background-image: url("https://img.freepik.com/fotos-premium/fondo-pantalla-abstracto-lineas-liquidas-colores-vibrantes-fondo-abstracto-colorido-suave_692702-6779.jpg");  */
+  background-image: url("https://img.freepik.com/fotos-premium/fondo-pantalla-abstracto-lineas-liquidas-colores-vibrantes-fondo-abstracto-colorido-suave_692702-6779.jpg");  
 
 }
 
@@ -163,16 +164,83 @@ padding: 5%;
 }
 
 footer{
-  background-color: rgb(20, 19, 19);
+ 
   padding: 2.5rem;
-  color: white;
   padding-bottom:5%;
+  height: 100px;
 }
-.btn-primary{
-  float: right;
-  border: 4px blue solid;
-  border-radius: 10px;
-  gap:15px;
+.fondoprincipal footer{
+  background-color: rgb(20, 19, 19);
+}
+
+.btn{
+  transition: all 0.9s ease-out;
+  cursor: pointer;
+  color: white;
   width: 125px;
   height: 50px;
+  font-weight: bold;
+  border-radius: 10px;;
+
+}
+.btn-primary{
+ 
+ 
+  background-color: blue;
+  border:4px rgb(2, 2, 163) solid;
+ 
+ 
+}
+.btn-primary:hover {
+  transform:  translateY(-5px);
+  background-color:rgb(2, 2, 88) ;
+  
+}
+.btn-secondary{
+ 
+  background-color: orange;
+  border: 4px rgb(168, 111, 5) solid;
+
+}
+.btn-secondary:hover {
+  transform:  translateY(-5px);
+  background-color: rgb(83, 55, 2);
+  
+}
+.botton-block button{
+  width: 100%;
+  display: block;
+  margin-bottom: 4%;
+}
+.fondodetalle footer{
+  background-color: rgb(213, 208, 208);
+}
+
+.fondodetalle .btn-primary{
+ 
+
+  background-color: blue;
+  border:4px rgb(2, 2, 163) solid;
+ 
+ 
+}
+.fondodetalle .btn-primary:hover{
+ 
+  transform:  translateY(-5px);
+  background-color: rgb(2, 2, 88);
+ 
+ 
+}
+.fondodetalle .btn-secondary{
+ 
+
+  background-color: green;
+  border:4px rgb(0, 80, 0) solid;
+ 
+ 
+}
+.fondodetalle .btn-secondary:hover{
+  transform:  translateY(-5px);
+  background-color:rgb(2, 178, 2);
+ 
 }
