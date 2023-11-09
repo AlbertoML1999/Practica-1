@@ -244,3 +244,13 @@ footer{
   background-color:rgb(2, 178, 2);
  
 }
+
+.cancel {
+  background-color: red;
+  border: rgb(81, 2, 2) solid;
+}
+
+.save {
+  background-color: green;
+  border: rgb(2, 60, 2) solid
+}
