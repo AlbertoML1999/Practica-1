@@ -281,3 +281,7 @@ footer {
 .fondodetalle .titulo-tabla {
   background-color: rgb(108, 130, 255);
 }
+
+.containerFormulario {
+  color: white;
+}
