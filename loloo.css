@@ -1,243 +1,275 @@
+#topic {
 
-#topic{
- 
 
-  margin-top:0%;
-  display:flex;
- justify-content: flex-start;
- flex-wrap: wrap;
- width: 100%;
- height: 100px;
- background-color: rgb(225,6,0);
- border: 5px black solid;
- 
- 
-
-  
-}
-#topic img{
-height: 100%;
-width: 15%;
-
-}
-.body{
+  margin-top: 0%;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
   width: 100%;
-  
+  height: 100px;
+  background-color: rgb(225, 6, 0);
+  border: 5px black solid;
+
+
+
+
 }
-.clase{
+
+#topic img {
+  height: 100%;
+  width: 15%;
+
+}
+
+.body {
+  width: 100%;
+
+}
+
+.clase {
   margin: auto;
   font-family: 'Times New Roman', Times, serif;
   font-style: italic;
-  color:rgb(255, 255, 255);
+  color: rgb(255, 255, 255);
   text-align: center;
   font-weight: bold;
-  font-size :2.1rem;
+  font-size: 2.1rem;
   font-stretch: ultra-expanded;
   text-decoration: solid;
- 
-}
-.container2{
- margin: 1em; 
- display:flex;
-justify-content: space-around;
-gap:5px;
-flex-wrap: wrap;
-width: 100%;
+  background-color: rgb(225, 6, 0);
 
-  
-}
-.item{
- 
-box-shadow:8px 7px black ;
-margin: 8px 4px;
-background-color: rgb(255, 255, 255);
-min-width: 200px;
-max-width: 350px; 
-cursor: pointer;
-border: 4px grey solid;
-border-radius: 8px;
-transition: all 0.5s ease;
-overflow: hidden;
 }
 
-.item:hover{
-transform: translateY(-10px);
+.container2 {
+  margin: 1em;
+  display: flex;
+  justify-content: space-around;
+  gap: 5px;
+  flex-wrap: wrap;
+  width: 100%;
 
 
 }
 
-.fondoprincipal{
+.item {
 
+  box-shadow: 8px 7px black;
+  margin: 8px 4px;
+  background-color: rgb(255, 255, 255, 0.822);
+  min-width: 200px;
+  max-width: 350px;
+  cursor: pointer;
+  border: 4px grey solid;
+  border-radius: 8px;
+  transition: all 0.5s ease;
+  overflow: hidden;
+}
 
-  background-image: url("https://img.freepik.com/fotos-premium/fondo-pantalla-abstracto-lineas-liquidas-colores-vibrantes-fondo-abstracto-colorido-suave_692702-6779.jpg");  
+.item:hover {
+  transform: translateY(-10px);
+
 
 }
 
-.container2 img{
+.fondoprincipal {
+
+
+  background-image: url("https://img.freepik.com/fotos-premium/fondo-pantalla-abstracto-lineas-liquidas-colores-vibrantes-fondo-abstracto-colorido-suave_692702-6779.jpg");
+
+}
+
+.container2 img {
   width: 100%;
   height: 55%;
-  
+
 
 }
-.container2 h1{ 
+
+.container2 h1 {
   font-size: x-large;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   text-align: center;
 
 }
-.pie{
-font-size: large;
-text-align: center;
-padding-bottom: 3%;
+
+.pie {
+  font-size: large;
+  text-align: center;
+  padding-bottom: 3%;
 }
 
-.noLink{
+.noLink {
   color: black;
   text-decoration: none;
 }
-.col-md-6 .contenedor .caja{
-   
+
+.col-md-6 .contenedor .caja {
+
   width: 50%;
-  
- 
-}
-
-
-.fondodetalle .container img{
- width: 35%;
- 
-
 
 
 }
 
 
-#titulo-escuderia{
+.fondodetalle .container img {
+  width: 35%;
+
+
+
+
+}
+
+.fondodetalle .piloto {
+  height: 90%;
+}
+
+h1 {
+  background-color: black;
+  color: white;
+}
+
+#titulo-escuderia {
   text-align: center;
-  background-color:rgb(213, 208, 208);
+  background-color: brown;
+  color: white;
+  font-family: 'Times New Roman', Times, serif;
+  font-style: italic;
 }
-.row h1{
+
+.row h1 {
   text-align: center;
- font-size: x-large;
+  font-size: x-large;
 }
 
 .col-md-6 .contenedor {
 
-   display: flex;
+  display: flex;
   flex-direction: row;
- flex-wrap: nowrap;
- min-height: auto;
-  
- 
- 
+  flex-wrap: nowrap;
+  min-height: auto;
+
+
+
 }
+
 .col-md-6 {
-border: 1px black solid;
-padding: 5%;
+  border: 1px black solid;
+  padding: 5%;
 
 }
-.col-md-6 .contenedor .caja img{
+
+.col-md-6 .contenedor .caja img {
   width: 100%;
- height: 75%;
-  
- 
- 
-}
-.contenedor h4{
-  margin-bottom: 10em;
+  height: 75%;
 
-  
+
+
 }
+
+
 .letras {
   font-style: italic;
-  
- 
- 
-}
-.fondodetalle .container{
-  display: block;
-  background-color: white;
- 
-}
-.fondodetalle{
-  background-color: rgb(213, 208, 208);
+
+
+
 }
 
-footer{
- 
+.fondodetalle .container {
+  display: block;
+  background-color: white;
+
+}
+
+.fondodetalle {
+  background-image: url("https://img.freepik.com/fotos-premium/fondo-pantalla-abstracto-lineas-liquidas-colores-vibrantes-fondo-abstracto-colorido-suave_692702-6779.jpg");
+
+}
+
+footer {
+
   padding: 2.5rem;
-  padding-bottom:5%;
+  padding-bottom: 5%;
   height: 100px;
 }
-.fondoprincipal footer{
+
+.fondoprincipal footer {
   background-color: rgb(20, 19, 19);
 }
 
-.btn{
+.btn {
   transition: all 0.9s ease-out;
   cursor: pointer;
   color: white;
   width: 125px;
   height: 50px;
   font-weight: bold;
-  border-radius: 10px;;
+  border-radius: 10px;
+  ;
 
 }
-.btn-primary{
- 
- 
+
+.btn-primary {
+
+
   background-color: blue;
-  border:4px rgb(2, 2, 163) solid;
- 
- 
+  border: 4px rgb(2, 2, 163) solid;
+
+
 }
+
 .btn-primary:hover {
-  transform:  translateY(-5px);
-  background-color:rgb(2, 2, 88) ;
-  
+  transform: translateY(-5px);
+  background-color: rgb(2, 2, 88);
+
 }
-.btn-secondary{
- 
+
+.btn-secondary {
+
   background-color: orange;
   border: 4px rgb(168, 111, 5) solid;
 
 }
+
 .btn-secondary:hover {
-  transform:  translateY(-5px);
+  transform: translateY(-5px);
   background-color: rgb(83, 55, 2);
-  
+
 }
-.botton-block button{
+
+.botton-block button {
   width: 100%;
   display: block;
   margin-bottom: 4%;
 }
-.fondodetalle footer{
+
+.fondodetalle footer {
   background-color: rgb(213, 208, 208);
 }
 
-.fondodetalle .btn-primary{
- 
+.fondodetalle .btn-primary {
+
 
   background-color: blue;
-  border:4px rgb(2, 2, 163) solid;
- 
- 
+  border: 4px rgb(2, 2, 163) solid;
+
+
 }
-.fondodetalle .btn-primary:hover{
- 
-  transform:  translateY(-5px);
+
+.fondodetalle .btn-primary:hover {
+
+  transform: translateY(-5px);
   background-color: rgb(2, 2, 88);
- 
- 
+
+
 }
-.fondodetalle .btn-secondary{
- 
+
+.fondodetalle .btn-secondary {
+
 
   background-color: green;
-  border:4px rgb(0, 80, 0) solid;
- 
- 
+  border: 4px rgb(0, 80, 0) solid;
+
+
 }
 .fondodetalle .btn-secondary:hover{
   transform:  translateY(-5px);
@@ -253,4 +285,18 @@ footer{
 .save {
   background-color: green;
   border: rgb(2, 60, 2) solid
+}
+
+.fondodetalle .btn-secondary:hover {
+  transform: translateY(-5px);
+  background-color: rgb(2, 178, 2);
+
+}
+
+.fondodetalle .titulo-tabla {
+  background-color: rgb(108, 130, 255);
+}
+
+.containerFormulario {
+  color: white;
 }
