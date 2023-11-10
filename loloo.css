@@ -284,7 +284,7 @@ footer {
 
 .save {
   background-color: green;
-  border: rgb(2, 60, 2) solid
+  border: rgb(2, 60, 2) solid;
 }
 
 .fondodetalle .btn-secondary:hover {
@@ -297,6 +297,20 @@ footer {
   background-color: rgb(108, 130, 255);
 }
 
-.containerFormulario {
-  color: white;
+.formItem {
+  margin: 5px;
+}
+
+.input {
+  border-radius: 20px;
+  border: none;
+  background-color: purple;
+  height: 25px;
+}
+
+.formulario {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
