@@ -1,4 +1,4 @@
-#topic {
+/* #topic {
 
 
   margin-top: 0%;
@@ -19,14 +19,15 @@
   height: 100%;
   width: 15%;
 
-}
+} */
+
 
 .body {
-  width: 100%;
+  width:100%;
 
 }
 
-.clase {
+/* .clase {
   margin: auto;
   font-family: 'Times New Roman', Times, serif;
   font-style: italic;
@@ -39,14 +40,15 @@
   background-color: rgb(225, 6, 0);
 
 }
-
+ */
 .container2 {
-  margin: 1em;
+  margin-bottom: 1em;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   gap: 5px;
   flex-wrap: wrap;
   width: 100%;
+  margin-top: 18em;
 
 
 }
@@ -66,16 +68,17 @@
 }
 
 .item:hover {
-  transform: translateY(-10px);
+  /*transform: translateY(-3px); */
 
 
 }
 
 .fondoprincipal {
 
-
-  background-image: url("https://img.freepik.com/fotos-premium/fondo-pantalla-abstracto-lineas-liquidas-colores-vibrantes-fondo-abstracto-colorido-suave_692702-6779.jpg");
-
+/* 
+   background-image: url("https://img.freepik.com/fotos-premium/fondo-pantalla-abstracto-lineas-liquidas-colores-vibrantes-fondo-abstracto-colorido-suave_692702-6779.jpg"); 
+   */
+   background-color: wheat;
 }
 
 .container2 img {
@@ -85,11 +88,12 @@
 
 }
 
-.container2 h1 {
+.container2 .pie h1 {
   font-size: x-large;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   text-align: center;
-
+  background-color: black;
+  color: white;
 }
 
 .pie {
@@ -103,6 +107,12 @@
   text-decoration: none;
 }
 
+.container{
+  margin-top: 18.5em;
+justify-content: space-around;
+  
+}
+
 .col-md-6 .contenedor .caja {
 
   width: 50%;
@@ -112,21 +122,19 @@
 
 
 .fondodetalle .container img {
-  width: 35%;
+ 
+  width: 100%;
+  height: 35%;
 
 
 
 
 }
 
-.fondodetalle .piloto {
-  height: 90%;
+.contenedor h4{
+  padding-bottom: 15em;
 }
 
-h1 {
-  background-color: black;
-  color: white;
-}
 
 #titulo-escuderia {
   text-align: center;
@@ -144,23 +152,27 @@ h1 {
 .col-md-6 .contenedor {
 
   display: flex;
+
   flex-direction: row;
   flex-wrap: nowrap;
-  min-height: auto;
+
 
 
 
 }
 
 .col-md-6 {
+ 
   border: 1px black solid;
-  padding: 5%;
+  padding-top: 3% ;
+  
+  
 
 }
 
 .col-md-6 .contenedor .caja img {
   width: 100%;
-  height: 75%;
+  height: 79%;
 
 
 
@@ -181,30 +193,30 @@ h1 {
 }
 
 .fondodetalle {
-  background-image: url("https://img.freepik.com/fotos-premium/fondo-pantalla-abstracto-lineas-liquidas-colores-vibrantes-fondo-abstracto-colorido-suave_692702-6779.jpg");
-
+  /* background-image: url("https://img.freepik.com/fotos-premium/fondo-pantalla-abstracto-lineas-liquidas-colores-vibrantes-fondo-abstracto-colorido-suave_692702-6779.jpg"); */
+  background-color: wheat;
 }
 
-footer {
+/* footer {
 
   padding: 2.5rem;
   padding-bottom: 5%;
   height: 100px;
-}
+} 
 
 .fondoprincipal footer {
   background-color: rgb(20, 19, 19);
 }
-
+ */
 .btn {
   transition: all 0.9s ease-out;
   cursor: pointer;
   color: white;
   width: 125px;
-  height: 50px;
+  height: 58px;
   font-weight: bold;
   border-radius: 10px;
-  ;
+  
 
 }
 
@@ -235,11 +247,17 @@ footer {
   background-color: rgb(83, 55, 2);
 
 }
-
-.botton-block button {
-  width: 100%;
+.button-block button{
   display: block;
-  margin-bottom: 4%;
+  width: 100%;
+
+}
+.botton-detalle  {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap:15%;
 }
 
 .fondodetalle footer {
@@ -277,15 +295,43 @@ footer {
  
 }
 
-.cancel {
-  background-color: red;
-  border: rgb(81, 2, 2) solid;
+.botton-nuevoElemento{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap:15%;
+  
 }
 
-.save {
-  background-color: green;
-  border: rgb(2, 60, 2) solid;
+
+.btn.btn-danger {
+  background-color: red;
+  border:  4px rgb(180, 5, 5) solid;
+  margin-top: 1em;
+
+ 
+  
 }
+
+.btn.btn-success {
+ background-color: rgb(5, 185, 5);
+ border:  4px green solid;
+ margin-top: 1em;
+
+
+
+
+}
+.btn.btn-info{
+  background-color: rgb(5, 185, 5);
+  border:  4px green solid;
+  margin-top: 1em;
+  color: white;
+
+}
+
+
 
 .fondodetalle .btn-secondary:hover {
   transform: translateY(-5px);
@@ -297,7 +343,7 @@ footer {
   background-color: rgb(108, 130, 255);
 }
 
-.formItem {
+/* .formItem {
   margin: 5px;
 }
 
@@ -306,11 +352,76 @@ footer {
   border: none;
   background-color: purple;
   height: 25px;
-}
+} */
 
 .formulario {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+.nav{
+  position: fixed;
+  left: 0;
+  top: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 100%;
+
+  max-height: 340px;
+  background: linear-gradient(to left top,rgb(168, 41, 41),rgb(67, 48, 48));
+  color: white;
+  text-align: center;
+  
+}
+
+.nav-logo em{
+font-weight :500;
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+
+}
+.nav img{
+  width: 125px;
+  height: 100%; 
+}
+.formulario img{
+  width: 125px;
+  height: 150px; 
+  
+}
+.nav-menu ul{
+  display:flex;
+  flex-wrap: wrap;
+justify-content:center;
+  margin-top :30px;
+}
+.nav-menu ul li{
+  list-style: none;
+
+
+  
+}
+.nav-menu ul li .link{
+  text-decoration: none;
+  font-weight: 600;
+  color: wheat;
+margin-right: 3em;
+  
+
+ 
+}
+.link:hover,
+
+.active{
+  border-bottom: 2px solid wheat;
+}
+
+.container-fluid{
+  padding-top: 5.7em;
+  margin-top: 12em;
+  
+  background-color: wheat;
+
 }
