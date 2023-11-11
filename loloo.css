@@ -27,6 +27,13 @@
   border-radius: 8px;
   transition: all 0.5s ease;
   overflow: hidden;
+  align-items: center;
+}
+
+.logo {
+  width: fit-content;
+  height: 52%;
+  width: 100%;
 }
 
 
