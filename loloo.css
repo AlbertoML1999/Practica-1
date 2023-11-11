@@ -23,7 +23,7 @@
 
 
 .body {
-  width:100%;
+  width: 100%;
 
 }
 
@@ -75,10 +75,10 @@
 
 .fondoprincipal {
 
-/* 
+  /* 
    background-image: url("https://img.freepik.com/fotos-premium/fondo-pantalla-abstracto-lineas-liquidas-colores-vibrantes-fondo-abstracto-colorido-suave_692702-6779.jpg"); 
    */
-   background-color: wheat;
+  background-color: wheat;
 }
 
 .container2 img {
@@ -107,21 +107,24 @@
   text-decoration: none;
 }
 
-.container{
+.container {
   margin-top: 18.5em;
-justify-content: space-around;  
+  justify-content: space-around;
+  background: linear-gradient(to left top, rgb(0, 0, 0), rgb(255, 255, 255));
 }
 
 .col-md-6 .contenedor .caja {
 
   width: 50%;
+  margin-top: 30%;
+  margin-bottom: 30%;
 
 
 }
 
 
 .fondodetalle .container .row img {
- 
+
   width: 100%;
   height: 35%;
 
@@ -130,9 +133,6 @@ justify-content: space-around;
 
 }
 
-.contenedor h4{
-  padding-bottom: 15em;
-}
 
 
 #titulo-escuderia {
@@ -160,18 +160,19 @@ justify-content: space-around;
 
 }
 
+
 .col-md-6 {
- 
+
   border: 1px black solid;
-  padding-top: 3% ;
-  
-  
+  padding-top: 3%;
+
+
 
 }
 
 .col-md-6 .contenedor .caja img {
   width: 100%;
-  height: 79%;
+  height: 60%;
 
 
 
@@ -215,7 +216,7 @@ justify-content: space-around;
   height: 60px;
   font-weight: bold;
   border-radius: 10px;
-  
+
 
 }
 
@@ -246,17 +247,19 @@ justify-content: space-around;
   background-color: rgb(83, 55, 2);
 
 }
-.button-block button{
+
+.button-block button {
   display: block;
   width: 100%;
-
+  background: linear-gradient(to left top, rgb(168, 41, 41), rgb(67, 48, 48));
 }
-.botton-detalle  {
+
+.botton-detalle {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-  gap:15%;
+  gap: 15%;
 }
 
 .fondodetalle footer {
@@ -288,43 +291,45 @@ justify-content: space-around;
 
 
 }
-.fondodetalle .btn-secondary:hover{
-  transform:  translateY(-5px);
-  background-color:rgb(2, 178, 2);
- 
+
+.fondodetalle .btn-secondary:hover {
+  transform: translateY(-5px);
+  background-color: rgb(2, 178, 2);
+
 }
 
-.botton-nuevoElemento{
+.botton-nuevoElemento {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-  gap:15%;
-  
+  gap: 15%;
+
 }
 
 
 .btn.btn-danger {
   background-color: red;
-  border:  4px rgb(180, 5, 5) solid;
+  border: 4px rgb(180, 5, 5) solid;
   margin-top: 1em;
 
- 
-  
+
+
 }
 
 .btn.btn-success {
- background-color: rgb(5, 185, 5);
- border:  4px green solid;
- margin-top: 1em;
+  background-color: rgb(5, 185, 5);
+  border: 4px green solid;
+  margin-top: 1em;
 
 
 
 
 }
-.btn.btn-info{
+
+.btn.btn-info {
   background-color: rgb(5, 185, 5);
-  border:  4px green solid;
+  border: 4px green solid;
   margin-top: 1em;
   color: white;
 
@@ -359,14 +364,16 @@ justify-content: space-around;
   justify-content: center;
   align-items: center;
 }
+
 .container .formulario {
   display: grid;
   flex-direction: row;
   background-color: rgb(175, 147, 147);
- border: 2px rgb(80, 70, 70) solid;
- 
+  border: 2px rgb(80, 70, 70) solid;
+
 }
-.nav{
+
+.nav {
   position: fixed;
   left: 0;
   top: 0;
@@ -375,58 +382,65 @@ justify-content: space-around;
   justify-content: space-around;
   width: 100%;
   max-height: 340px;
-  background: linear-gradient(to left top,rgb(168, 41, 41),rgb(67, 48, 48));
+  background: linear-gradient(to left top, rgb(168, 41, 41), rgb(67, 48, 48));
   color: white;
   text-align: center;
-  
-}
-
-.nav-logo em{
-font-weight :500;
-font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-
 
 }
-.nav img{
+
+.nav-logo em {
+  font-weight: 500;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+
+}
+
+.nav img {
   width: 125px;
-  height: 100%; 
+  height: 100%;
 }
-.formulario img{
+
+.formulario img {
   width: 125px;
-  height: 150px; 
-  
+  height: 150px;
+
 }
-.nav-menu ul{
-  display:flex;
+
+.nav-menu ul {
+  display: flex;
   flex-wrap: wrap;
-justify-content:center;
-  margin-top :30px;
+  justify-content: center;
+  margin-top: 30px;
 }
-.nav-menu ul li{
+
+.nav-menu ul li {
   list-style: none;
 
 
-  
+
 }
-.nav-menu ul li .link{
+
+
+.nav-menu ul li .link {
   text-decoration: none;
   font-weight: 600;
   color: wheat;
-margin-right: 3em;
-  
+  margin-right: 3em;
 
- 
+
+
 }
+
 .link:hover,
 
-.active{
+.active {
   border-bottom: 2px solid wheat;
 }
 
-.container-fluid{
+.container-fluid {
   padding-top: 5.7em;
   margin-top: 12em;
-  
+
   background-color: wheat;
 
 }
