@@ -1,46 +1,8 @@
-/* #topic {
-
-
-  margin-top: 0%;
-  display: flex;
-  justify-content: flex-start;
-  flex-wrap: wrap;
-  width: 100%;
-  height: 100px;
-  background-color: rgb(225, 6, 0);
-  border: 5px black solid;
-
-
-
-
-}
-
-#topic img {
-  height: 100%;
-  width: 15%;
-
-} */
-
-
 .body {
   width: 100%;
 
 }
 
-/* .clase {
-  margin: auto;
-  font-family: 'Times New Roman', Times, serif;
-  font-style: italic;
-  color: rgb(255, 255, 255);
-  text-align: center;
-  font-weight: bold;
-  font-size: 2.1rem;
-  font-stretch: ultra-expanded;
-  text-decoration: solid;
-  background-color: rgb(225, 6, 0);
-
-}
- */
 .container2 {
   margin-bottom: 1em;
   display: flex;
@@ -67,17 +29,10 @@
   overflow: hidden;
 }
 
-.item:hover {
-  /*transform: translateY(-3px); */
-
-
-}
 
 .fondoprincipal {
 
-  /* 
-   background-image: url("https://img.freepik.com/fotos-premium/fondo-pantalla-abstracto-lineas-liquidas-colores-vibrantes-fondo-abstracto-colorido-suave_692702-6779.jpg"); 
-   */
+
   background-color: wheat;
 }
 
@@ -193,21 +148,9 @@
 }
 
 .fondodetalle {
-  /* background-image: url("https://img.freepik.com/fotos-premium/fondo-pantalla-abstracto-lineas-liquidas-colores-vibrantes-fondo-abstracto-colorido-suave_692702-6779.jpg"); */
   background-color: wheat;
 }
 
-/* footer {
-
-  padding: 2.5rem;
-  padding-bottom: 5%;
-  height: 100px;
-} 
-
-.fondoprincipal footer {
-  background-color: rgb(20, 19, 19);
-}
- */
 .btn {
   transition: all 0.9s ease-out;
   cursor: pointer;
@@ -347,16 +290,6 @@
   background-color: rgb(108, 130, 255);
 }
 
-/* .formItem {
-  margin: 5px;
-}
-
-.input {
-  border-radius: 20px;
-  border: none;
-  background-color: purple;
-  height: 25px;
-} */
 
 .container-fluid .formulario {
   display: flex;
