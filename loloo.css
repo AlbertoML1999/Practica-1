@@ -328,6 +328,12 @@
 
 }
 
+.botton-detalle .btn.btn-danger {
+  background: linear-gradient(to left top, rgb(116, 116, 116), rgb(0, 0, 0));
+  border-color: black;
+  border-width: 3px;
+}
+
 .nav-logo em {
   font-weight: 500;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
