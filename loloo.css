@@ -4,6 +4,7 @@
 }
 
 .containerflex {
+  /*donde están metidos todos los equipos*/
   margin-bottom: 1em;
   display: flex;
   justify-content: space-between;
@@ -31,6 +32,7 @@
 }
 
 .logo {
+  /*la foto del escudo de cada equipo*/
   width: fit-content;
   height: 52%;
   width: 100%;
@@ -51,17 +53,12 @@
 }
 
 .containerflex .pie h1 {
+  /*nombre y fecha en los equipos en la pagina principal*/
   font-size: x-large;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   text-align: center;
   background-color: black;
   color: white;
-}
-
-.pie {
-  font-size: large;
-  text-align: center;
-  padding-bottom: 3%;
 }
 
 .noLink {
@@ -70,12 +67,15 @@
 }
 
 .container {
+  /*donde está metido todo lo de detalle*/
   margin-top: 18.5em;
   justify-content: space-around;
   background: linear-gradient(to left top, rgb(0, 0, 0), rgb(255, 255, 255));
+  display: block;
 }
 
 .col-md-6 .contenedor .caja {
+  /*la caja de cada uno de los dos pilotos en detalle*/
 
   width: 50%;
   margin-top: 30%;
@@ -86,6 +86,7 @@
 
 
 .fondodetalle .container .row img {
+  /*la foto del coche en detalle*/
 
   width: 100%;
   height: 35%;
@@ -96,21 +97,14 @@
 }
 
 
-
-#titulo-escuderia {
-  text-align: center;
-  background-color: brown;
-  color: white;
-  font-family: 'Times New Roman', Times, serif;
-  font-style: italic;
-}
-
 .row h1 {
+  /*titulo pilotos detalle*/
   text-align: center;
   font-size: x-large;
 }
 
 .col-md-6 .contenedor {
+  /*la caja donde entran los dos pilotos*/
 
   display: flex;
 
@@ -124,6 +118,7 @@
 
 
 .col-md-6 {
+  /*lo que divide en dos la pagina detalle al principio*/
 
   border: 1px black solid;
   padding-top: 3%;
@@ -133,6 +128,7 @@
 }
 
 .col-md-6 .contenedor .caja img {
+  /*la imagen de cada uno de los pilotos*/
   width: 100%;
   height: 60%;
 
@@ -142,15 +138,10 @@
 
 
 .letras {
+  /*todo lo que pone en la tabla del arriba a la izquierda en detalle*/
   font-style: italic;
 
 
-
-}
-
-.fondodetalle .container {
-  display: block;
-  background-color: white;
 
 }
 
@@ -170,20 +161,6 @@
 
 }
 
-.btn-primary {
-
-
-  background-color: blue;
-  border: 4px rgb(2, 2, 163) solid;
-
-
-}
-
-.btn-primary:hover {
-  transform: translateY(-5px);
-  background-color: rgb(2, 2, 88);
-
-}
 
 .btn-secondary {
 
@@ -216,22 +193,6 @@
   background-color: rgb(213, 208, 208);
 }
 
-.fondodetalle .btn-primary {
-
-
-  background-color: blue;
-  border: 4px rgb(2, 2, 163) solid;
-
-
-}
-
-.fondodetalle .btn-primary:hover {
-
-  transform: translateY(-5px);
-  background-color: rgb(2, 2, 88);
-
-
-}
 
 .fondodetalle .btn-secondary {
 
@@ -293,9 +254,6 @@
 
 }
 
-.fondodetalle .titulo-tabla {
-  background-color: rgb(108, 130, 255);
-}
 
 
 .container-fluid .formulario {
@@ -314,6 +272,7 @@
 }
 
 .nav {
+  /*la cabecera que sale en todas las paginas*/
   position: fixed;
   left: 0;
   top: 0;
@@ -329,6 +288,7 @@
 }
 
 .botton-detalle .btn.btn-danger {
+  /*los botones de editar, borrar y ver todos los elementos en detalle*/
   background: linear-gradient(to left top, rgb(116, 116, 116), rgb(0, 0, 0));
   border-color: black;
   border-width: 3px;
@@ -342,6 +302,7 @@
 }
 
 .nav img {
+  /*foto de la cabecera*/
   width: 125px;
   height: 100%;
 }
@@ -362,12 +323,11 @@
 .nav-menu ul li {
   list-style: none;
 
-
-
 }
 
 
 .nav-menu ul li .link {
+  /*donde pone inicio en la cabecera*/
   text-decoration: none;
   font-weight: 600;
   color: wheat;
@@ -377,13 +337,8 @@
 
 }
 
-.link:hover,
-
-.active {
-  border-bottom: 2px solid wheat;
-}
-
 .container-fluid {
+  /*lo que contiene todo lo del formulario*/
   padding-top: 5.7em;
   margin-top: 12em;
 
