@@ -1,4 +1,4 @@
-.body {
+body {
   width: 100%;
   background-color: wheat;
 
@@ -35,8 +35,9 @@
 .logo {
   /*la foto del escudo de cada equipo*/
   width: fit-content;
-  height: 52%;
+  height: 60%;
   width: 100%;
+  top: 0;
 }
 
 .containerflex img {
@@ -46,9 +47,9 @@
 
 }
 
-.pie {
+.pie h1 {
   /*nombre y fecha en los equipos en la pagina principal*/
-  font-size: x-large;
+  font-size: large;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   text-align: center;
   background-color: black;
