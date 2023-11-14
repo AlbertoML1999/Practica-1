@@ -34,10 +34,10 @@ body {
 
 .logo {
   /*la foto del escudo de cada equipo*/
-  width: fit-content;
+  top: 0;
   height: 60%;
   width: 100%;
-  top: 0;
+  
 }
 
 .containerflex img {
