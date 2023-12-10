@@ -16,4 +16,4 @@ app.use(express.static(__dirname + '/../public'));
 
 app.use('/', boardRouter);
 
-app.listen(3001, () => console.log('Listening on port 3001!'));
+app.listen(3001, () => console.log('http://localhost:3001'));

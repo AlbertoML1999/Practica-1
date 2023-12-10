@@ -24,7 +24,7 @@ router.post('/post/new', (req, res) => {
 router.get('/post/:id', (req, res) => {
 
     let equipo = boardService.getEquipo(req.params.id);
-
+    
     res.render('detalle', { equipo });
 });
 
@@ -35,13 +35,24 @@ router.get('/post/:id/delete', (req, res) => {
     res.render('deleted_post');
 });
 
-router.get('/post/:id/put', (req, res) => {
+router.get('/post/:id/edit', (req, res) => {
+
+    let equipo = boardService.getEquipo(req.params.id);
+
+    res.render('editarElemento', { equipo });
+
+});
+
+router.post('/post/:id/edit/save', (req, res) => {
 
     let { teamName, vehiculo,  logo,  lugar, jefe,  president,chasis,motor, debut,campeonatos, carreras, victorias,podios,puntos, poles} = req.body;
 
-    boardService.putEquipo(req.params.id);
+    boardService.editEquipo(req.params.id,{teamName, vehiculo,  logo,  lugar, jefe,  president,chasis,motor, debut,campeonatos, carreras, victorias,podios,puntos, poles});
 
-    res.render('puted_post');
+    let equipo = boardService.getEquipo(req.params.id);
+
+    res.render('detalle', { equipo });
+
 });
 
 router.post('/post/:id', (req, res) => {

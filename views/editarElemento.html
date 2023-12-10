@@ -33,7 +33,7 @@
             </div>
         </div>
         <div class="formulario">
-            <form role="form" action="edit/:{{equipo.id}}" method="post">
+            <form role="form" action="/post/{{equipo.id}}/edit/save" method="post">
                 <img
                     src="https://static.vecteezy.com/system/resources/previews/013/923/537/original/red-car-vehicle-auto-detailing-logo-png.png">
 
@@ -52,12 +52,12 @@
                 </div>
                 <div class="form-group">
                     <label for="location">Localización:</label>
-                    <input type="text" class="form-control" id="location" name="lugar" placeholder="Localización" value="{{equipo.location}}">
+                    <input type="text" class="form-control" id="location" name="lugar" placeholder="Localización" value="{{equipo.lugar}}">
                 </div>
 
                 <div class="form-group">
                     <label for="teamChief">Jefe de equipo:</label>
-                    <input type="text" class="form-control" id="teamChief" name="jefe" placeholder="Jefe de equipo" value="{{equipo.teamChief}}">
+                    <input type="text" class="form-control" id="teamChief" name="jefe" placeholder="Jefe de equipo" value="{{equipo.jefe}}">
                 </div>
                 <div class="form-group">
                     <label for="president">Presidente:</label>
@@ -65,7 +65,7 @@
                 </div>
                 <div class="form-group">
                     <label for="chassis">Chasis:</label>
-                    <input type="text" class="form-control" id="chassis" name="chasis" placeholder="Chasis" value="{{equipo.chassis}}">
+                    <input type="text" class="form-control" id="chassis" name="chasis" placeholder="Chasis" value="{{equipo.chasis}}">
                 </div>
                 <div class="form-group">
                     <label for="motor">Motor:</label>
@@ -84,7 +84,7 @@
                 </div>
                 <div class="form-group">
                     <label for="championships">Campeonatos:</label>
-                    <input type="number" class="form-control" id="championships" name="campeonatos" placeholder="Campeonatos" value="{{equipo.championships}}">
+                    <input type="number" class="form-control" id="championships" name="campeonatos" placeholder="Campeonatos" value="{{equipo.campeonatos}}">
                 </div>
                 <div class="form-group">
                     <label for="teamName">Estadísticas del equipo:</label>
@@ -92,21 +92,21 @@
                 <div class="row">
                     <div class="col">
                         <label for="races">Carreras:</label>
-                        <input type="number" class="form-control" id="races" name="carreras" placeholder="Races" value="{{equipo.races}}">
+                        <input type="number" class="form-control" id="races" name="carreras" placeholder="Races" value="{{equipo.carreras}}">
                     </div>
                     <div class="col">
                         <label for="victories">Victorias</label>
-                        <input type="number" class="form-control" id="victories" name="victorias" placeholder="Wins" value="{{equipo.victories}}">
+                        <input type="number" class="form-control" id="victories" name="victorias" placeholder="Wins" value="{{equipo.victorias}}">
                     </div>
                     <div class="col">
                         <label for="podiums">Podios</label>
-                        <input type="number" class="form-control" id="podiums" name="podios" placeholder="Podios" value="{{equipo.podiums}}">
+                        <input type="number" class="form-control" id="podiums" name="podios" placeholder="Podios" value="{{equipo.podios}}">
                     </div>
                 </div>
                 <div class="row">
                     <div class="col">
                         <label for="points">Puntos</label>
-                        <input type="number" class="form-control" id="points" name="puntos" placeholder="Points" value="{{equipo.points}}">
+                        <input type="number" class="form-control" id="points" name="puntos" placeholder="Points" value="{{equipo.puntos}}">
                     </div>
                     <div class="col">
                         <label for="poles">Poles:</label>

@@ -70,6 +70,10 @@ export function getEquipos(){
 export function getEquipo(id){
     return equipos.get(id);
 }
-export function putEquipo(id){
-     equipos.put(id);
+export function editEquipo(id, equipo){
+
+    equipo.id = id.toString();
+    equipos.delete(equipo.id);
+    equipos.set(equipo.id, equipo);
+
 }
