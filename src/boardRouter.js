@@ -59,8 +59,6 @@ router.post('/post/:id/newPilot', (req, res) => {
 
     let { pilotName, imagenPiloto, numeroPiloto, championships, races, victories, podiums, points} = req.body;
 
-    //const pilotos = boardService.getPilotos(req.params.id);
-
     boardService.addPiloto(req.params.id, {pilotName, imagenPiloto, numeroPiloto, championships, races, victories, podiums, points});
 
     let equipo = boardService.getEquipo(req.params.id);
