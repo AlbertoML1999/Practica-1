@@ -49,8 +49,10 @@ router.get('/post/:id/edit', (req, res) => {
 router.post('/post/:id/edit/save', (req, res) => {
 
     let { teamName, vehiculo,  logo,  lugar, jefe,  president,chasis,motor, debut,campeonatos, carreras, victorias,podios,puntos, poles} = req.body;
+     
+    let pilotos = boardService.getPilotos(req.params.id);
 
-    boardService.editEquipo(req.params.id,{teamName, vehiculo,  logo,  lugar, jefe,  president,chasis,motor, debut,campeonatos, carreras, victorias,podios,puntos, poles});
+    boardService.editEquipo(req.params.id,{teamName, vehiculo,  logo,  lugar, jefe,  president,chasis,motor, debut,campeonatos, carreras, victorias,podios,puntos, poles, pilotos});
 
     let equipo = boardService.getEquipo(req.params.id);
 
