@@ -13,8 +13,8 @@ router.get('/', (req, res) => {
 router.post('/post/new', (req, res) => {
 
     let { teamName, vehiculo,  logo,  lugar, jefe,  president,chasis,motor, debut,campeonatos, carreras, victorias,podios,puntos, poles} = req.body;
-
-    boardService.addEquipo({teamName, vehiculo,  logo,  lugar, jefe,  president,chasis,motor, debut,campeonatos, carreras, victorias,podios,puntos, poles});
+    let pilotos = [];
+    boardService.addEquipo({teamName, vehiculo,  logo,  lugar, jefe,  president,chasis,motor, debut,campeonatos, carreras, victorias,podios,puntos, poles, pilotos});
 
     res.render('saved_post');
 });
@@ -55,13 +55,17 @@ router.post('/post/:id/edit/save', (req, res) => {
 
 });
 
-router.post('/post/:id', (req, res) => {
+router.post('/post/:id/newPilot', (req, res) => {
 
     let { pilotName, imagenPiloto, numeroPiloto, championships, races, victories, podiums, points} = req.body;
 
-    boardService.addPiloto({pilotName, imagenPiloto, numeroPiloto, championships, races, victories, podiums, points});
+    //const pilotos = boardService.getPilotos(req.params.id);
 
-    res.render('detalle', {equipo});
+    boardService.addPiloto(req.params.id, {pilotName, imagenPiloto, numeroPiloto, championships, races, victories, podiums, points});
+
+    let equipo = boardService.getEquipo(req.params.id);
+
+    res.render('detalle', { equipo });
 });
 
 export default router;

@@ -117,26 +117,21 @@
       <div class="col-md-6 col-xs-6 col-sm-6 col-lg-6">
         <h1>PILOTOS</h1>
         <div class="contenedor">
+          {{#equipo.pilotos}}
+
           <div class="caja">
-            <img src="https://e00-marca.uecdn.es/assets/multimedia/imagenes/2023/02/25/16773183133860.jpg">
+            <img src={{imagenPiloto}}>
             <p>
-            <h3>14</h3>
+            <h3>{{pilotName}}</h3>
             </p>
             <p>
-            <h4>Fernando Alonso</h4>
+            <h4>{{numeroPiloto}}</h4>
             </p>
 
           </div>
-          <div class="caja">
-            <img
-              src="https://media.formula1.com/content/dam/fom-website/drivers/2023Drivers/stroll.jpg.img.1536.high.jpg">
-            <p>
-            <h3>18</h3>
-            </p>
-            <p>
-            <h4>Lance Stroll</h4>
-            </p>
-          </div>
+
+          {{/equipo.pilotos}}
+
         </div>
 
       </div>
@@ -155,22 +150,20 @@
             </tr>
           </thead>
           <tbody>
+
+            {{#equipo.pilotos}}
+
             <tr>
-              <td>Fernando Alonso</td>
-              <td>377</td>
-              <td>32</td>
-              <td>105</td>
-              <td>2244</td>
-              <td>2</td>
+              <td>{{pilotName}}</td>
+              <td>{{races}}</td>
+              <td>{{victories}}</td>
+              <td>{{podiums}}</td>
+              <td>{{points}}</td>
+              <td>{{championships}}</td>
             </tr>
-            <tr>
-              <td>Lance Stroll </td>
-              <td>140</td>
-              <td>0</td>
-              <td>3</td>
-              <td>247</td>
-              <td>0</td>
-            </tr>
+
+            {{/equipo.pilotos}}
+
           </tbody>
         </table>
       </div>
@@ -179,7 +172,7 @@
     <div class="row">
       <div class="col-md-12">
         <div class="formulario">
-          <form role="form" action="post/:id" method="post">
+          <form role="form" action="/post/{{equipo.id}}/newPilot" method="post">
 
             <div class="form-group">
 
