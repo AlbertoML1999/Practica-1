@@ -226,8 +226,13 @@ export function deleteEquipo(id){
     equipos.delete(id);
 }
 
-export function getEquipos(){
-    return [...equipos.values()];
+export function getEquipos(from, to){
+    let values = [...equipos.values()];
+    if(from !== undefined) {
+        return values.slice(from, to);
+    } else {
+        return values;
+    }
 }
 
 export function getEquipo(id){

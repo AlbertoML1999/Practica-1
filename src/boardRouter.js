@@ -5,18 +5,36 @@ const router = express.Router();
 
 router.get('/', (req, res) => {
 
-    res.render('index', { 
-        equipos: boardService.getEquipos() 
-    });
+    res.render('index', { equipos: boardService.getEquipos(0,3)});
+});
+
+router.get('/Service', (req, res) => {
+
+    const from = parseInt(req.query.from);
+    const to = parseInt(req.query.to);
+
+    const equipos = boardService.getEquipos(from,to);
+
+    res.render('equipos', { equipos: equipos });
 });
 
 router.post('/post/new', (req, res) => {
+    const requiredFields = ['teamName', 'vehiculo', 'logo', 'lugar', 'jefe', 'president', 'chasis', 'debut', 'campeonatos', 'carreras', 'victorias', 'podios', 'puntos', 'poles'];
 
-    let { teamName, vehiculo,  logo,  lugar, jefe,  president,chasis,motor, debut,campeonatos, carreras, victorias,podios,puntos, poles} = req.body;
+    for (const field of requiredFields) {
+        if (!req.body[field]) {
+            const errorMessage = `Por favor, rellene el campo de ${field} antes de guardar.`;
+            res.send(`<script>alert("${errorMessage}"); window.history.back();</script>`);
+            return; // Detener la ejecución si falta un campo
+        }
+    }
+
+    // Si todos los campos requeridos están presentes, continuar con el procesamiento
+    let { teamName, vehiculo, logo, lugar, jefe, president, chasis, motor, debut, campeonatos, carreras, victorias, podios, puntos, poles } = req.body;
     let pilotos = [];
-    let id = boardService.addEquipo({teamName, vehiculo,  logo,  lugar, jefe,  president,chasis,motor, debut,campeonatos, carreras, victorias,podios,puntos, poles, pilotos});
+    let id = boardService.addEquipo({ teamName, vehiculo, logo, lugar, jefe, president, chasis, motor, debut, campeonatos, carreras, victorias, podios, puntos, poles, pilotos });
     let equipo = boardService.getEquipo(id);
-    
+
     res.render('detalle', { equipo });
 });
 
@@ -34,7 +52,7 @@ router.get('/delete/:id', (req, res) => {
     boardService.deleteEquipo(req.params.id);
 
     res.render('index', { 
-        equipos: boardService.getEquipos() 
+        equipos: boardService.getEquipos(0,3) 
     });
 });
 
@@ -47,6 +65,7 @@ router.get('/post/:id/edit', (req, res) => {
 });
 
 router.post('/post/:id/edit/save', (req, res) => {
+    
 
     let { teamName, vehiculo,  logo,  lugar, jefe,  president,chasis,motor, debut,campeonatos, carreras, victorias,podios,puntos, poles} = req.body;
      
@@ -61,6 +80,16 @@ router.post('/post/:id/edit/save', (req, res) => {
 });
 
 router.post('/post/:id/newPilot', (req, res) => {
+
+    const requiredFields = ['pilotName', 'imagenPiloto', 'numeroPiloto', 'championships', 'races', 'victories', 'podiums', 'points'];
+
+    for (const field of requiredFields) {
+        if (!req.body[field]) {
+            const errorMessage = `Por favor, rellene el campo de ${field} antes de guardar.`;
+            res.send(`<script>alert("${errorMessage}"); window.history.back();</script>`);
+            return; // Detener la ejecución si falta un campo
+        }
+    }
 
     let { pilotName, imagenPiloto, numeroPiloto, championships, races, victories, podiums, points} = req.body;
 
