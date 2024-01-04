@@ -39,7 +39,7 @@
 
                 <div class="form-group">
                     <label for="teamName">Nombre de la escudería:</label>
-                    <input type="text" class="form-control" id="teamName"name="teamName" placeholder="Enter nombre de la escudería" value="{{equipo.teamName}}" required>
+                    <input type="text" class="form-control" id="teamName"name="teamName" placeholder="Enter nombre de la escudería" value="{{equipo.teamName}}" pattern="^[A-Z]" required>
                 </div>
                 <div class="form-group">
                     <label for="vehiculo">Vehículo de la escudería</label>
@@ -69,7 +69,7 @@
                 </div>
                 <div class="form-group">
                     <label for="motor">Motor:</label>
-                    <select id="motor" name="motor" class="form-control" value="{{equipo.motor}}" required>
+                    <select id="motor" name="motor" class="form-control" value="{{equipo.motor}}">
                         <option value="otro">Elige una opción</option>
                         <option value="mercedes">Mercedes</option>
                         <option value="honda">Honda</option>

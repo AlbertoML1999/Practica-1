@@ -66,6 +66,15 @@ router.get('/post/:id/edit', (req, res) => {
 
 router.post('/post/:id/edit/save', (req, res) => {
     
+    const requiredFields = ['teamName', 'vehiculo', 'logo', 'lugar', 'jefe', 'president', 'chasis', 'debut', 'campeonatos', 'carreras', 'victorias', 'podios', 'puntos', 'poles'];
+
+    for (const field of requiredFields) {
+        if (!req.body[field]) {
+            const errorMessage = `Por favor, rellene el campo de ${field} antes de guardar.`;
+            res.send(`<script>alert("${errorMessage}"); window.history.back();</script>`);
+            return;
+        }
+    }
 
     let { teamName, vehiculo,  logo,  lugar, jefe,  president,chasis,motor, debut,campeonatos, carreras, victorias,podios,puntos, poles} = req.body;
      
