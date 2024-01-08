@@ -3,7 +3,7 @@
   background-color: wheat;
 }
 
-.containerflex {
+.teams {
   /*donde están metidos todos los equipos*/
   margin-bottom: 1em;
   display: flex;

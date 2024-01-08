@@ -7,20 +7,19 @@ async function loadMore() {
     const from = (loadMoreRequests + 1) * NUM_RESULTS;
     const to = from + NUM_RESULTS;
 
-    try {
-        const response = await fetch(`Service?from=${from}&to=${to}`);
+   // try {
+        const response = await fetch(`/Service?from=${from}&to=${to}`);
 
         const newTeams = await response.text();
 
-        const containerflex = document.getElementById("containerflex");
+        const teamsDiv = document.getElementById("teams");
 
-        containerflex.innerHTML += newTeams;
+        teamsDiv.innerHTML += newTeams;
 
         loadMoreRequests++;
-        
+      /*  
     } catch (error) {
         console.error('Error al cargar equipos:', error);
-    }
+    }*/
+    
 }
-
-
