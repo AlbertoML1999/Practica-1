@@ -9,10 +9,7 @@ async function loadMore() {
     const response = await fetch(`/Service?from=${from}&to=${to}`);
     const newTeams = await response.text();
 
-    const teamsDiv = $('#teams'); // Usamos jQuery para seleccionar el contenedor de equipos
-
-    // Ocultamos todos los elementos antes de agregar los nuevos
-    // teamsDiv.children('.item').hide();
+    const teamsDiv = $('#teams');
 
     teamsDiv.append(newTeams);
 
