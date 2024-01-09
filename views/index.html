@@ -35,26 +35,32 @@
           <li><a href="#" class="link">Inicio</a></li>
         </ul>
       </div>
+      <button id="favorites-button">Favoritos</button>
     </div>
+
+<div id="favorites-container">
+  <button id="close-button" onclick="toggleFavorites()">←</button>
+  <ul>
+  </ul>
+</div>
 
     <div id="searchResults" class="search-results"></div>
 
     <div id="teams" class="teams">
     {{#equipos}}
     
-    <div class="item" >
-      <a href="/post/{{id}}" class="noLink">
-        <img 
-        src= {{vehiculo}}>
+<div class="item">
+  <a href="/post/{{id}}" class="noLink">
+    <img src="{{vehiculo}}">
 
-        <div class="pie">
-          <h1> {{teamName}}  {{debut}}</h1>
-        </div>
-        <div class="logo">
-          <img src= {{logo}}>
-        </div>
-      </a>
-    </div> 
+    <div class="pie">
+      <h1>{{teamName}} {{debut}}<span class="favorite-heart" data-team="{{teamName}}">&#10084;</span></h1>
+    </div>
+    <div class="logo">
+      <img src="{{logo}}">
+    </div>
+  </a>
+</div>
     
     
     {{/equipos}}

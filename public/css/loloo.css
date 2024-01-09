@@ -209,7 +209,6 @@
 }
 
 .nav {
-  /*la cabecera que sale en todas las paginas*/
   position: fixed;
   left: 0;
   top: 0;
@@ -225,7 +224,6 @@
 }
 
 .botton-detalle .btn.btn-danger {
-  /*los botones de editar, borrar y ver todos los elementos en detalle*/
   background: linear-gradient(to left top, rgb(116, 116, 116), rgb(0, 0, 0));
   border-color: black;
   border-width: 3px;
@@ -237,7 +235,6 @@
 }
 
 .nav img {
-  /*foto de la cabecera*/
   width: 125px;
   height: 100%;
 }
@@ -258,6 +255,69 @@
 .nav-menu ul li {
   list-style: none;
 
+}
+
+#favorites-container {
+  position: fixed;
+  top: 0;
+  right: -250px;
+  width: 250px;
+  height: 100%;
+  background: rgba(255, 68, 0, 0.838);
+  overflow-y: auto;
+  transition: right 0.3s ease;
+}
+
+.favorite-heart {
+  bottom: 10px;
+  right: 10px;
+  cursor: pointer;
+  color: white;
+  /* Color del corazón no seleccionado */
+}
+
+.favorite-heart.selected {
+  color: red;
+  /* Color del corazón seleccionado */
+}
+
+#close-button {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: transparent;
+  color: #333;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+#favorites-container ul {
+  margin-top: 40px;
+  padding: 0;
+  list-style: none;
+}
+
+#close-button {
+  background-color: wheat;
+  border-radius: 5px;
+}
+
+#favorites-container ul li {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+#favorites-button {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: #f2ff00a3;
+  color: rgb(83, 0, 0);
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
 }
 
 .busqueda{

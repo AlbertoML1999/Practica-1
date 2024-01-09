@@ -31,3 +31,25 @@ function searchTeams() {
         }
     });
 }
+
+document.addEventListener('DOMContentLoaded', function () {
+    var favoritesButton = document.getElementById('favorites-button');
+    var favoritesContainer = document.getElementById('favorites-container');
+
+    favoritesButton.addEventListener('click', function () {
+        if (favoritesContainer.style.right === '0px') {
+            favoritesContainer.style.right = '-250px';
+        } else {
+            favoritesContainer.style.right = '0px';
+        }
+    });
+});
+
+function toggleFavorites() {
+    var favoritesContainer = document.getElementById('favorites-container');
+    if (favoritesContainer.style.right === '0px') {
+        favoritesContainer.style.right = '-250px';
+    } else {
+        favoritesContainer.style.right = '0px';
+    }
+}
