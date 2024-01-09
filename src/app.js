@@ -6,7 +6,6 @@ import boardRouter from './boardRouter.js';
 
 const app = express();
 
-
 app.set('views', __dirname + '/../views');
 app.set('view engine', 'html');
 app.engine('html', mustacheExpress(), "html");

@@ -1,5 +1,12 @@
-const equipos = new Map();
+export const equipos = new Map();
 let nextId = 0;
+
+export function addEquipo(equipo) {
+    let id = nextId++;
+    equipo.id = id.toString();
+    equipos.set(equipo.id, equipo);
+    return equipo.id;
+}
 
 addEquipo({
     teamName: "Aston Martin",
@@ -206,19 +213,9 @@ addEquipo({ teamName: "Haas F1 Team",
        pilotos: [],
 });
 
-export function addEquipo(equipo) {
-
-    let id = nextId++;
-    equipo.id = id.toString();
-    equipos.set(equipo.id, equipo);
-    return equipo.id;
-}
-
 export function addPiloto(id, piloto) {
-
     const equipo = equipos.get(id);
     equipo.pilotos.push(piloto);
-
 }
 
 

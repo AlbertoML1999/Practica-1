@@ -24,6 +24,11 @@
         <h1>FORMULA RACING 1.5</h1>
         </p>
         <p>Official website</p>
+                  <div class="searcher">
+                    <input type="text" id="buscar" name="q" placeholder="Ingrese su búsqueda" class="entrada" onkeyup="searchTeams()">
+                     
+                    </form>
+                  </div>
       </div>
       <div class="nav-menu" id="nav-menu">
         <ul>
@@ -31,6 +36,9 @@
         </ul>
       </div>
     </div>
+
+    <div id="searchResults" class="search-results"></div>
+
     <div id="teams" class="teams">
     {{#equipos}}
     

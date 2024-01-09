@@ -109,4 +109,17 @@ router.post('/post/:id/newPilot', (req, res) => {
     res.render('detalle', { equipo });
 });
 
+router.get('/search', (req, res) => {
+    const query = req.query.q.toLowerCase();
+
+    // Filtrar equipos que coincidan con la consulta
+    const filteredTeams = Array.from(boardService.equipos.values()).filter(equipo =>
+        equipo.teamName.toLowerCase().includes(query)
+    );
+
+    // Renderizar la plantilla de resultados de búsqueda
+    res.render('searchResults', { equipos: filteredTeams });
+});
+
+
 export default router;
