@@ -4,9 +4,11 @@ let nextId = 0;
 export function addEquipo(equipo) {
     let id = nextId++;
     equipo.id = id.toString();
+    equipo.visible = true; 
     equipos.set(equipo.id, equipo);
     return equipo.id;
 }
+
 
 addEquipo({
     teamName: "Aston Martin",

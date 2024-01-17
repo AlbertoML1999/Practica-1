@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link type="text/css" rel="stylesheet" href="/css/loloo.css" />
   <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-    <script src="app.js"></script>
+  <script src="app.js"></script>
 
 
 
@@ -15,69 +15,86 @@
 
 <body class="fondo">
   <div class="containerflex">
-    <div class="nav">
+    <div class="nav" class="col-md-4 col-xs-4 col-sm-4 col-lg-4">
       <img
         src="https://static.vecteezy.com/system/resources/previews/013/923/537/original/red-car-vehicle-auto-detailing-logo-png.png">
-      <div class="nav-logo">
+      <div class="nav-logo" class="col-md-4 col-xs-4 col-sm-4 col-lg-4">
 
         <p>
         <h1>FORMULA RACING 1.5</h1>
         </p>
         <p>Official website</p>
-                  <div class="searcher">
-                    <input type="text" id="buscar" name="q" placeholder="Ingrese su búsqueda" class="entrada" onkeyup="searchTeams()">
-                     
-                    </form>
-                  </div>
+        <div class="searcher">
+          <input type="text" id="buscar" name="q" placeholder="Ingrese su búsqueda" class="entrada"
+            onkeyup="searchTeams()">
+        </div>
       </div>
-      <div class="nav-menu" id="nav-menu">
+      <div class="nav-menu" id="nav-menu" class="col-md-4 col-xs-4 col-sm-4 col-lg-4">
         <ul>
           <li><a href="#" class="link">Inicio</a></li>
         </ul>
+        <label for="comparison">Filtro por debut:</label>
+        <select id="comparison" class="compr">
+          <option value="mayor">Mayor que</option>
+          <option value="menor">Menor que</option>
+        </select>
+        <br>
+        <label for="valueToCompare"></label>
+        <input type="number" id="valueToCompare" name="valueToCompare" placeholder="Ingrese un valor" class="entr_num">
+        <br>
+        <button onclick="filterTeams()" class="filter">Filtrar Equipos</button>
+        <button id="favorites-button">Favoritos</button>
       </div>
-      <button id="favorites-button">Favoritos</button>
     </div>
 
-<div id="favorites-container">
-  <button id="close-button" onclick="toggleFavorites()">←</button>
-  <ul>
-  </ul>
-</div>
+
+
+    <div id="favorites-container">
+      <button id="close-button" onclick="toggleFavorites()">←</button>
+      <ul>
+      </ul>
+    </div>
 
     <div id="searchResults" class="search-results"></div>
 
     <div id="teams" class="teams">
-    {{#equipos}}
-    
-<div class="item">
-  <a href="/post/{{id}}" class="noLink">
-    <img src="{{vehiculo}}">
+      <!-- ... (resto del código) ... -->
 
-    <div class="pie">
-      <h1>{{teamName}} {{debut}}<span class="favorite-heart" data-team="{{teamName}}">&#10084;</span></h1>
-    </div>
-    <div class="logo">
-      <img src="{{logo}}">
-    </div>
-  </a>
-</div>
-    
-    
-    {{/equipos}}
+      <div id="teams" class="teams">
+        {{#equipos}}
+
+        <div class="item">
+          <a href="/post/{{id}}" class="noLink">
+            <img src="{{vehiculo}}">
+
+            <div class="pie">
+              <h1>{{teamName}} {{debut}}<span class="favorite-heart" data-team="{{teamName}}">&#10084;</span></h1>
+            </div>
+            <div class="logo">
+              <img src="{{logo}}">
+            </div>
+          </a>
+        </div>
+
+        {{/equipos}}
+      </div>
+
+      <!-- ... (resto del código) ... -->
+
     </div>
 
   </div>
   <br>
-          <div class="button-block">
-            <button onclick='loadMore()' class="btn btn-secondary" type="button">CARGAR MAS</button>
-          </div>
+  <div class="button-block">
+    <button onclick='loadMore()' class="btn btn-secondary" type="button">CARGAR MAS</button>
+  </div>
   <br>
-    <div class="button-block">
+  <div class="button-block">
 
-      <a href="nuevo_Elemento.html" class="noLink">
-        <button class="btn btn-secondary" type="button">Crear nuevo elemento</button>
-      </a>
-    </div>
-  </body>
+    <a href="nuevo_Elemento.html" class="noLink">
+      <button class="btn btn-secondary" type="button">Crear nuevo elemento</button>
+    </a>
+  </div>
+</body>
 
 </html>
