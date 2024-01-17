@@ -108,6 +108,10 @@ function toggleFavorites() {
         document.getElementById('president').setCustomValidity('');
     }if (chassis===""){
         document.getElementById('chassis').setCustomValidity('No puede ser vacio');
+    }else if (chassis.length<3){
+        document.getElementById('chassis').setCustomValidity('El chasis no puede tener un nombre tan corto');
+    }else if (chassis.length>15){
+        document.getElementById('chassis').setCustomValidity('El chasis no puede tener un nombre tan largo');
     }else{
         document.getElementById('chassis').setCustomValidity('');
     }if (jefe===""){
