@@ -85,3 +85,66 @@ function toggleFavorites() {
         favoritesContainer.style.right = '0px';
     }
 }
+
+ function validarFormulario(){
+    var teamName = document.getElementById('teamName').value;
+    var president=document.getElementById('president').value;
+    var chassis= document.getElementById('chassis').value;
+    var jefe=document.getElementById('teamChief').value;
+    var lugar= document.getElementById('location').value;
+    var debut =document.getElementById('debut').value;
+ 
+    var LetraMayus=teamName.charAt(0);
+
+    if (teamName === "") {
+        document.getElementById('teamName').setCustomValidity('No puede ser vacio');
+    } else if (LetraMayus != LetraMayus.toUpperCase()) {
+        document.getElementById('teamName').setCustomValidity('El nombre tiene que empezar por mayuscula');
+    } else{
+        document.getElementById('teamName').setCustomValidity('');
+    }if (president===""){
+        document.getElementById('president').setCustomValidity('No puede ser vacio');
+    }else{
+        document.getElementById('president').setCustomValidity('');
+    }if (chassis===""){
+        document.getElementById('chassis').setCustomValidity('No puede ser vacio');
+    }else{
+        document.getElementById('chassis').setCustomValidity('');
+    }if (jefe===""){
+        document.getElementById('teamChief').setCustomValidity('No puede ser vacio');
+    }else{
+        document.getElementById('teamChief').setCustomValidity('');
+    }if (lugar===""){
+        document.getElementById('location').setCustomValidity('No puede ser vacio');
+    }else{
+        document.getElementById('location').setCustomValidity('');
+    }
+    
+}
+function validarURLVehiculo(){
+    var urlVehiculo = document.getElementById('vehiculo').value;
+   
+    fetch(urlVehiculo, { method: 'HEAD' })
+    .then(response => {
+        if (response.ok && response.headers.get('content-type').startsWith('image/')) {
+            document.getElementById('vehiculo').setCustomValidity('');
+        }else{
+            document.getElementById('vehiculo').setCustomValidity('Introduzca una URL referente a una imagen');   
+        }
+
+})
+}
+function validarURLLogo(){
+    var urlLogo = document.getElementById('logo').value;
+   
+    fetch(urlLogo, { method: 'HEAD' })
+    .then(response => {
+        if (response.ok && response.headers.get('content-type').startsWith('image/')) {
+            document.getElementById('logo').setCustomValidity('');
+        }else{
+            document.getElementById('logo').setCustomValidity('Introduzca una URL referente a una imagen');   
+        }   
+
+})
+}
+
