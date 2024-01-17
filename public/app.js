@@ -14,13 +14,42 @@ async function loadMore() {
     teamsDiv.append(newTeams);
 
     loadMoreRequests++;
+
 }
 
-function searchTeams() {
-    const searchTerm = $('#buscar').val().toLowerCase(); // Obtenemos el término de búsqueda y lo convertimos a minúsculas
+function filterTeams() {
+    const comparisonType = $('#comparison').val(); // Obtener si es "mayor" o "menor"
+    const valueToCompare = parseInt($('#valueToCompare').val()); // Obtener el valor a comparar
+
+    if (isNaN(valueToCompare)) {
+        alert('Ingrese un valor numérico válido.');
+        return;
+    }
+
     const teamsDiv = $('#teams');
 
-    // Mostramos solo los elementos cuyo nombre coincide con el término de búsqueda
+    teamsDiv.find('.item').each(function () {
+        const debutYear = parseInt($(this).find('h1').text().match(/\d+/));
+
+        console.log(`Debut Year: ${debutYear}, Comparison Type: ${comparisonType}, Value to Compare: ${valueToCompare}`);
+
+        if ((comparisonType === 'mayor' && debutYear > valueToCompare) ||
+            (comparisonType === 'menor' && debutYear < valueToCompare)) {
+            console.log('Showing:', debutYear);
+            $(this).show();
+        } else {
+            console.log('Hiding:', debutYear);
+            $(this).hide();
+        }
+    });
+}
+
+
+
+function searchTeams() {
+    const searchTerm = $('#buscar').val().toLowerCase();
+    const teamsDiv = $('#teams');
+
     teamsDiv.children('.item').each(function () {
         const teamName = $(this).find('h1').text().toLowerCase();
 
@@ -31,6 +60,9 @@ function searchTeams() {
         }
     });
 }
+
+
+
 
 document.addEventListener('DOMContentLoaded', function () {
     var favoritesButton = document.getElementById('favorites-button');

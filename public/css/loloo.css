@@ -1,5 +1,4 @@
-
-.fondo{
+.fondo {
   background-color: wheat;
 }
 
@@ -36,7 +35,7 @@
   top: 0;
   height: 60%;
   width: 100%;
-  
+
 }
 
 .containerflex img {
@@ -268,6 +267,22 @@
   transition: right 0.3s ease;
 }
 
+.keys {
+  width: 50%;
+  height: 30px;
+  background: rgba(255, 255, 255, 0.496);
+  border-radius: 5px;
+  text-align: center;
+}
+
+.num_ent {
+  width: 20%;
+  height: 30px;
+  background: rgba(255, 255, 255, 0.496);
+  border-radius: 5px;
+  text-align: center;
+}
+
 .favorite-heart {
   bottom: 10px;
   right: 10px;
@@ -320,18 +335,18 @@
   cursor: pointer;
 }
 
-.busqueda{
+.busqueda {
   background: linear-gradient(to left top, rgb(254, 254, 254), rgb(0, 0, 0));
   border-radius: 6px;
   height: 30px;
   transition: transform 0.3s ease;
 }
 
-.busqueda:hover{
+.busqueda:hover {
   transform: translateY(-3px);
 }
 
-.entrada{
+.entrada {
   width: 80%;
   height: 30px;
   background: rgba(255, 255, 255, 0.545);
@@ -339,6 +354,27 @@
   text-align: center;
 }
 
+.compr {
+  background-color: #ffffff;
+  border-radius: 5px;
+  border-width: 1px;
+}
+
+.filter {
+  color: white;
+  border-radius: 5px;
+  background: rgb(88, 1, 1);
+  border-width: 2px;
+  border-color: white;
+}
+
+.entr_num {
+  width: 60%;
+  height: 20px;
+  background: rgba(255, 255, 255, 0.545);
+  border-radius: 5px;
+  text-align: center;
+}
 
 .nav-menu ul li .link {
   /*donde pone inicio en la cabecera*/
@@ -346,9 +382,6 @@
   font-weight: 600;
   color: wheat;
   margin-right: 3em;
-
-
-
 }
 
 .container-fluid {
@@ -359,7 +392,8 @@
   background-color: wheat;
 
 }
-.estilo-tabla{
+
+.estilo-tabla {
   font-weight: 700;
 }
 
