@@ -60,7 +60,7 @@ function toggleFavorites() {
     var chassis= document.getElementById('chassis').value;
     var jefe=document.getElementById('teamChief').value;
     var lugar= document.getElementById('location').value;
-    var debut =document.getElementById('debut').value;
+ 
  
     var LetraMayus=teamName.charAt(0);
 
@@ -91,28 +91,24 @@ function toggleFavorites() {
 }
 function validarURLVehiculo(){
     var urlVehiculo = document.getElementById('vehiculo').value;
-   
-    fetch(urlVehiculo, { method: 'HEAD' })
-    .then(response => {
-        if (response.ok && response.headers.get('content-type').startsWith('image/')) {
-            document.getElementById('vehiculo').setCustomValidity('');
-        }else{
-            document.getElementById('vehiculo').setCustomValidity('Introduzca una URL referente a una imagen');   
-        }
-
-})
+    var regex = /^(ftp|http|https):\/\/[^ "]+$/;
+    if (regex.test(urlVehiculo)) {
+        document.getElementById('vehiculo').setCustomValidity('');
+    } else {
+        document.getElementById('vehiculo').setCustomValidity('La URL introducida es incorrecta');
+    }
 }
+
 function validarURLLogo(){
     var urlLogo = document.getElementById('logo').value;
-   
-    fetch(urlLogo, { method: 'HEAD' })
-    .then(response => {
-        if (response.ok && response.headers.get('content-type').startsWith('image/')) {
-            document.getElementById('logo').setCustomValidity('');
-        }else{
-            document.getElementById('logo').setCustomValidity('Introduzca una URL referente a una imagen');   
-        }   
-
-})
+    var regex = /^(ftp|http|https):\/\/[^ "]+$/;
+    if (regex.test(urlLogo)) {
+        document.getElementById('logo').setCustomValidity('');
+    } else {
+        document.getElementById('logo').setCustomValidity('La URL introducida es incorrecta');
+    }
 }
+
+
+
 

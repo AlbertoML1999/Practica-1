@@ -44,17 +44,18 @@
                 <div class="form-group">
                     <label for="teamName">Nombre de la escudería:</label>
                     <input type="text" class="form-control" id="teamName" name="teamName"
-                        placeholder="Enter nombre de la escudería" pattern="[A-Z][a-zA-Z0-9\s]*" required oninvalid="validarFormulario()" >
+                        placeholder="Enter nombre de la escudería" pattern="[A-Z][a-zA-Z0-9\s]*" role="alert" required oninvalid="validarFormulario()" >
+                        
                 </div>
                 <div class="form-group">
                     <label for="vehiculo">Vehículo de la escudería</label>
                     <input type="url" class="form-control" id="vehiculo" name="vehiculo"
-                        placeholder="Enter url del vehículo de la escudería" required  >
+                        placeholder="Enter url del vehículo de la escudería" required oninvalid="validarURLVehiculo()" >
                 </div>
                 <div class="form-group">
                     <label for="logo">Logo de la escudería:</label>
                     <input type="url" class="form-control" id="logo" name="logo"
-                        placeholder="Enter url del logo de la escudería" required  >
+                        placeholder="Enter url del logo de la escudería" required  oninvalid="validarURLLogo()">
                 </div>
                 <div class="form-group">
                     <label for="location">Localización:</label>

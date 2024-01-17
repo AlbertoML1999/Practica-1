@@ -40,7 +40,7 @@
 
 <div id="favorites-container">
   <button id="close-button" onclick="toggleFavorites()">←</button>
-  <ul>
+  <ul id="listaFavoritos">
   </ul>
 </div>
 
@@ -52,14 +52,16 @@
 <div class="item">
   <a href="/post/{{id}}" class="noLink">
     <img src="{{vehiculo}}">
+  </a>
 
     <div class="pie">
-      <h1>{{teamName}} {{debut}}<span class="favorite-heart" data-team="{{teamName}}">&#10084;</span></h1>
+      <h1><span data-team="{{teamName}}">{{teamName}} {{debut}}</h1></span><button onclick="toggleFavorito(this)">Añadir a favorito</button>
+      
     </div>
     <div class="logo">
       <img src="{{logo}}">
     </div>
-  </a>
+ 
 </div>
     
     
@@ -78,6 +80,7 @@
         <button class="btn btn-secondary" type="button">Crear nuevo elemento</button>
       </a>
     </div>
+    <script src="favorito.js"></script>
   </body>
 
 </html>

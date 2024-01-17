@@ -1,128 +1,44 @@
-const btnCart = document.querySelector('.container-cart-icon');
-const containerCartProducts = document.querySelector('.container-cart-products');
 
-btnCart.addEventListener('click', () => {
-	containerCartProducts.classList.toggle('hidden-cart');
-});
+function toggleFavorito(button) {
+	var listItem = button.parentNode;
+	var spanElement = listItem.querySelector('span');
+	var itemName = spanElement.textContent;
 
-/* ========================= */
-const cartInfo = document.querySelector('.cart-product');// lo que aparece en favoritos
-const rowProduct = document.querySelector('.row-product');//donde insertamos los favoritos
+	// Verifica si el elemento ya es un favorito
+	var esFavorito = button.classList.toggle('favorite');
 
-// Lista de todos los contenedores de productos
-const productsList = document.querySelector('.container-items');
+	// Obtiene la lista de favoritos almacenada localmente
+	var favoritos = JSON.parse(localStorage.getItem('favoritos')) || [];
 
-// Variable de arreglos de Productos
-let allProducts = [];
-
-const valorTotal = document.querySelector('.total-pagar');
-
-const countProducts = document.querySelector('#contador-productos');
-
-const cartEmpty = document.querySelector('.cart-empty');
-const cartTotal = document.querySelector('.cart-total');
-
-productsList.addEventListener('click', e => {
-	if (e.target.classList.contains('btn-add-cart')) {
-		const product = e.target.parentElement;
-
-		const infoProduct = {
-			quantity: 1,
-			title: product.querySelector('h1').textContent,
-		
-		};
-
-	 	const exits = allProducts.some(
-			product => product.title === infoProduct.title
-		);
-
-		if (exits) {
-			const products = allProducts.map(product => {
-				if (product.title === infoProduct.title) {
-	
-					return product;
-				} else {
-					return product;
-				}
-			});
-			allProducts = [...products]; 
-		} else {
-			allProducts = [...allProducts, infoProduct];
-		}
-
-		showHTML();
-	}
-});
-
-rowProduct.addEventListener('click', e => {
-	if (e.target.classList.contains('icon-close')) {
-		const product = e.target.parentElement;
-		const title = product.querySelector('p').textContent;
-
-		allProducts = allProducts.filter(
-			product => product.title !== title
-		);
-
-		console.log(allProducts);
-
-		showHTML();
-	}
-});
-
-// Funcion para mostrar  HTML
-const showHTML = () => {
-	if (!allProducts.length) {
-		cartEmpty.classList.remove('hidden');
-		rowProduct.classList.add('hidden');
-		cartTotal.classList.add('hidden');
+	// Actualiza la lista de favoritos
+	if (esFavorito) {
+		favoritos.push(itemName);
 	} else {
-		cartEmpty.classList.add('hidden');
-		rowProduct.classList.remove('hidden');
-		cartTotal.classList.remove('hidden');
+		favoritos = favoritos.filter(item => item !== itemName);
 	}
 
-	// Limpiar HTML
-	rowProduct.innerHTML = '';
+	// Almacena la lista actualizada localmente
+	localStorage.setItem('favoritos', JSON.stringify(favoritos));
 
-    
-	let total = 0;
-	let totalOfProducts = 0;
+	// Actualiza la lista de favoritos en la UI
+	actualizarListaFavoritos();
+}
 
-	allProducts.forEach(product => {
+// Función para actualizar la lista de favoritos en la UI
+function actualizarListaFavoritos() {
+	var listaFavoritos = document.getElementById('listaFavoritos');
+	listaFavoritos.innerHTML = ''; // Limpiar la lista antes de actualizar
 
-        
-		const containerProduct = document.createElement('div');
-		containerProduct.classList.add('cart-product');
+	// Obtiene la lista de favoritos almacenada localmente
+	var favoritos = JSON.parse(localStorage.getItem('favoritos')) || [];
 
-		containerProduct.innerHTML = `
-            <div class="info-cart-product">
-            
-                <p class="titulo-producto-carrito">${product.title}</p>
-               
-            </div>
-            <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke-width="1.5"
-                stroke="currentColor"
-                class="icon-close"
-            >
-                <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="M6 18L18 6M6 6l12 12"
-                />
-            </svg>
-        `;
-
-		rowProduct.append(containerProduct);
-
-		total =
-			total + parseInt(product.quantity); 
-		totalOfProducts = totalOfProducts + product.quantity;
+	// Agrega los elementos favoritos a la lista
+	favoritos.forEach(item => {
+		var li = document.createElement('li');
+		li.textContent = item;
+		listaFavoritos.appendChild(li);
 	});
+}
 
-	valorTotal.innerText = ` Elementos añadidos a favoritos: ${total}`;
-	countProducts.innerText = totalOfProducts;
-};
+// Muestra la lista de favoritos, a pesar de recargar la página
+window.onload = actualizarListaFavoritos();

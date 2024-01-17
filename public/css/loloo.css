@@ -366,3 +366,7 @@
 input:invalid {
   background-color: rgba(255, 27, 27, 0.837);
 }
+
+.favorite {
+  color: red;
+}
